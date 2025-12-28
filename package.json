@@ -9,12 +9,18 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "keywords": ["web-design", "astro", "tailwind"],
+  "keywords": [
+    "web-design",
+    "astro",
+    "tailwind"
+  ],
   "author": "AWD",
   "license": "ISC",
   "dependencies": {
+    "@astrojs/node": "^9.5.1",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.6",
+    "resend": "^6.6.0",
     "tailwindcss": "^4.1.18"
   }
 }
