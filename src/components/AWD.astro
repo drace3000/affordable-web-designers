@@ -1,0 +1,21 @@
+---
+/**
+ * AWD brand text component
+ * Displays "AWD" in gold with a tooltip showing the full company name
+ */
+---
+
+<span class="awd-brand relative inline-block cursor-help group">
+  <span class="text-gradient-gold font-bold">AWD</span>
+  <span class="awd-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded-lg bg-primary-800 border border-gold-500/30 text-sm text-white whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none z-50">
+    Affordable Web Designers
+    <span class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-primary-800"></span>
+  </span>
+</span>
+
+<style is:global>
+  .awd-brand:hover .awd-tooltip {
+    transform: translateX(-50%) translateY(-4px);
+  }
+</style>
+

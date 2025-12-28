@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import TechCard from '../components/TechCard.astro';
 import Button from '../components/Button.astro';
+import AWD from '../components/AWD.astro';
 
 const services = [
   {
@@ -49,7 +50,7 @@ const services = [
   <Header />
 
   <main class="pt-32 lg:pt-48">
-    <section class="max-w-6xl mx-auto px-6">
+    <section class="max-w-6xl mx-auto px-6" data-hover-section>
       <SectionHeading 
         tag="Services"
         title="Our Expertise"
@@ -73,7 +74,7 @@ const services = [
     </section>
 
     <!-- Tech Stack Section -->
-    <section class="section-padding relative">
+    <section class="section-padding relative" data-hover-section>
       <div class="absolute inset-0 bg-section-gradient"></div>
       <div class="absolute inset-0 border-y border-primary-500/20"></div>
       
@@ -108,7 +109,7 @@ const services = [
               <div class="w-48 h-48 rounded-full border-2 border-dashed border-primary-500/30 flex items-center justify-center animate-spin" style="animation-duration: 30s;">
                 <div class="w-32 h-32 rounded-full border border-gold-500/40 flex items-center justify-center">
                   <div class="text-5xl font-black">
-                    <span class="text-gradient-blue">A</span><span class="text-gradient-gold">W</span><span class="text-gradient-blue">D</span>
+                    <AWD />
                   </div>
                 </div>
               </div>
