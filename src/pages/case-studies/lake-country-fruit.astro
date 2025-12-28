@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import Button from '../../components/Button.astro';
+---
+
+<BaseLayout title="Lake Country Fruit Storage Case Study">
+  <Header />
+
+  <main class="pt-32 lg:pt-48">
+    <article class="max-w-4xl mx-auto px-6">
+      <SectionHeading 
+        tag="Case Study"
+        title="Lake Country Fruit Storage"
+        subtitle="Modernizing agricultural warehousing with a seamless legacy migration."
+      />
+
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+        <div class="glass-panel p-6 text-center">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Industry</div>
+          <div class="text-white font-semibold">Agricultural Warehousing</div>
+        </div>
+        <div class="glass-panel-gold p-6 text-center">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Timeline</div>
+          <div class="text-gradient-gold font-bold text-xl">4 Weeks</div>
+        </div>
+        <div class="glass-panel p-6 text-center">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Tech Stack</div>
+          <div class="text-white font-semibold">.NET, SQL Server</div>
+        </div>
+      </div>
+
+      <div class="prose prose-invert prose-lg max-w-none mb-32">
+        <div class="glass-panel p-8 mb-12">
+          <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary-600 flex items-center justify-center text-sm">📋</span>
+            The Challenge
+          </h3>
+          <p class="text-gray-300 leading-relaxed">
+            Located in the Western New York Fruit Belt, Lake Country Fruit Storage relied on an extensive MS Access database that had reached its limits. The goal was to replace it with a robust enterprise solution without any business interruption during the peak harvest season.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-bold text-white mb-6">The Solution</h3>
+        <div class="grid sm:grid-cols-2 gap-6 mb-12">
+          <div class="glass-panel p-6 border-l-4 border-l-gold-500">
+            <div class="text-gold-400 text-xl mb-3">✅</div>
+            <h4 class="text-white font-bold mb-2">Inventory Management</h4>
+            <p class="text-gray-400 text-sm">Precise climate-controlled tracking and warehouse location assignment.</p>
+          </div>
+          <div class="glass-panel p-6 border-l-4 border-l-primary-500">
+            <div class="text-primary-400 text-xl mb-3">✅</div>
+            <h4 class="text-white font-bold mb-2">Sales Workflow</h4>
+            <p class="text-gray-400 text-sm">Automated Receipt → Bill of Lading → Picking → Bill of Sale process.</p>
+          </div>
+          <div class="glass-panel p-6 border-l-4 border-l-primary-500">
+            <div class="text-primary-400 text-xl mb-3">✅</div>
+            <h4 class="text-white font-bold mb-2">Advanced Search</h4>
+            <p class="text-gray-400 text-sm">Quick batch identification and real-time quality monitoring.</p>
+          </div>
+          <div class="glass-panel p-6 border-l-4 border-l-gold-500">
+            <div class="text-gold-400 text-xl mb-3">✅</div>
+            <h4 class="text-white font-bold mb-2">Seamless Migration</h4>
+            <p class="text-gray-400 text-sm">Zero downtime during the transition from legacy Access to SQL Server.</p>
+          </div>
+        </div>
+
+        <!-- Quote -->
+        <div class="glass-panel-gold p-8 lg:p-12 relative overflow-hidden mb-16">
+          <div class="absolute top-0 right-0 w-40 h-40 bg-gold-500/20 rounded-full blur-[80px]"></div>
+          <div class="text-5xl text-gold-500/30 absolute top-4 left-6 font-serif">"</div>
+          <blockquote class="relative z-10">
+            <p class="text-xl lg:text-2xl text-white font-medium italic mb-6 leading-relaxed">
+              This application marks a significant advancement in the agricultural sector... demonstrating the impactful role that targeted software development can play in addressing industry-specific challenges.
+            </p>
+            <footer class="text-gold-400 text-sm font-bold uppercase tracking-widest">— Lake Country Operations</footer>
+          </blockquote>
+        </div>
+      </div>
+    </article>
+
+    <section class="section-padding text-center relative">
+      <div class="absolute inset-0 border-t border-primary-500/20"></div>
+      <div class="relative max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8">Ready for results like these?</h2>
+        <Button href="/contact">Let's Discuss Your Project</Button>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

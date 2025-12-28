@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<BaseLayout title="About" description="Learn about AWD's mission to democratize professional-grade business solutions through modern technology.">
+  <Header />
+
+  <main class="pt-32 lg:pt-48">
+    <section class="max-w-6xl mx-auto px-6">
+      <SectionHeading 
+        tag="Our Story"
+        title="Engineering Efficiency."
+        subtitle="AWD was founded on a simple premise: professional-grade business solutions shouldn't require a Fortune 500 budget."
+      />
+
+      <div class="grid lg:grid-cols-2 gap-24 items-center mb-32">
+        <div class="space-y-8">
+          <p class="text-lg text-gray-300 leading-relaxed">
+            For decades, the software industry has been built on bloat. Massive teams, endless discovery phases, and six-figure entry prices. We saw a different path.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed">
+            By leveraging modern development frameworks, AI-augmented engineering, and a lean organizational structure, we deliver the same—and often superior—results at <span class="text-gold-400 font-semibold">10% of the cost</span>.
+          </p>
+          <div class="glass-panel-gold p-6 font-medium text-white italic relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gold-500/20 rounded-full blur-[40px]"></div>
+            <p class="relative z-10">"We don't just write code; we solve business problems with engineering precision."</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="glass-panel p-6 text-center">
+            <div class="stat-value">90%</div>
+            <div class="stat-label">More Affordable</div>
+          </div>
+          <div class="glass-panel-gold p-6 text-center">
+            <div class="stat-value">4x</div>
+            <div class="stat-label">Faster Launch</div>
+          </div>
+          <div class="glass-panel-gold p-6 text-center">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Direct Access</div>
+          </div>
+          <div class="glass-panel p-6 text-center">
+            <div class="text-4xl md:text-5xl font-black text-gradient-blue">Pure</div>
+            <div class="stat-label">Excellence</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section-padding relative">
+      <div class="absolute inset-0 bg-section-gradient"></div>
+      <div class="absolute inset-0 border-y border-primary-500/20"></div>
+      
+      <div class="relative max-w-6xl mx-auto px-6">
+        <SectionHeading 
+          title="The AWD Difference"
+          subtitle="How we stack up against traditional development firms."
+          centered
+        />
+
+        <div class="overflow-x-auto glass-panel p-2">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-primary-500/20">
+                <th class="py-6 px-6 text-sm font-bold uppercase tracking-widest text-gray-500">Feature</th>
+                <th class="py-6 px-6 text-sm font-bold uppercase tracking-widest text-gray-500">Traditional IT</th>
+                <th class="py-6 px-6 text-sm font-bold uppercase tracking-widest text-gold-400">AWD Approach</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-300">
+              <tr class="border-b border-primary-500/10">
+                <td class="py-6 px-6 font-semibold text-white">Team Size</td>
+                <td class="py-6 px-6">5–10+ Resources</td>
+                <td class="py-6 px-6 text-gradient-gold font-bold">1–3 Experts</td>
+              </tr>
+              <tr class="border-b border-primary-500/10">
+                <td class="py-6 px-6 font-semibold text-white">Timeline</td>
+                <td class="py-6 px-6">6–12 Months</td>
+                <td class="py-6 px-6 text-gradient-gold font-bold">2–4 Weeks</td>
+              </tr>
+              <tr class="border-b border-primary-500/10">
+                <td class="py-6 px-6 font-semibold text-white">Entry Price</td>
+                <td class="py-6 px-6">$100,000+</td>
+                <td class="py-6 px-6 text-gradient-gold font-bold">Fractional</td>
+              </tr>
+              <tr>
+                <td class="py-6 px-6 font-semibold text-white">Communication</td>
+                <td class="py-6 px-6">Account Managers</td>
+                <td class="py-6 px-6 text-gradient-gold font-bold">Direct to Lead Engineer</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

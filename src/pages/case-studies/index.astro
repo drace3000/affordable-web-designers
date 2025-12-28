@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import TechCard from '../../components/TechCard.astro';
+import Button from '../../components/Button.astro';
+
+const studies = [
+  {
+    title: "Lake Country Fruit Storage",
+    industry: "Agricultural Warehousing",
+    emoji: "🍎",
+    description: "Replaced an extensive MS Access database with a robust SQL Server solution without business interruption.",
+    href: "/case-studies/lake-country-fruit",
+    gold: true
+  },
+  {
+    title: "Community Wellness Center",
+    industry: "Healthcare & Fitness",
+    emoji: "🏥",
+    description: "Transformed simple attendance tracking into an information goldmine with predictive analytics and NLP.",
+    href: "/case-studies/community-wellness",
+    gold: false
+  }
+];
+---
+
+<BaseLayout title="Case Studies" description="See how AWD has helped businesses transform their operations through custom technology solutions.">
+  <Header />
+
+  <main class="pt-32 lg:pt-48">
+    <section class="max-w-6xl mx-auto px-6">
+      <SectionHeading 
+        tag="Work"
+        title="Proven Results."
+        subtitle="See how our streamlined approach delivers enterprise-grade success."
+      />
+
+      <div class="grid md:grid-cols-2 gap-12 mb-32">
+        {studies.map(study => (
+          <a href={study.href} class="group block">
+            <TechCard title={study.title} emoji={study.emoji} gold={study.gold} class="h-full group-hover:scale-[1.02] transition-transform duration-500">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-gold-400 mb-4">{study.industry}</div>
+              <p class="mb-8 text-gray-400">{study.description}</p>
+              <div class="inline-flex items-center gap-2 text-sm font-semibold text-primary-300 group-hover:text-gold-400 transition-colors">
+                Read Case Study
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+            </TechCard>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-padding text-center relative">
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="w-[500px] h-[500px] bg-gradient-to-r from-primary-600/20 via-gold-500/10 to-primary-600/20 rounded-full blur-[100px]"></div>
+      </div>
+      
+      <div class="relative max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8">Want to be our next <span class="text-gradient-gold">success story</span>?</h2>
+        <p class="text-gray-400 text-lg mb-12">
+          We're ready to transform your data into a competitive advantage.
+        </p>
+        <Button href="/contact">Start Your Project</Button>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

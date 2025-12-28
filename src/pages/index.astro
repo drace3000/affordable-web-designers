@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import TechCard from '../components/TechCard.astro';
+import StatGrid from '../components/StatGrid.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+
+const advantageStats = [
+  { value: "2–4", label: "Weeks" },
+  { value: "1–3", label: "Experts" },
+  { value: "90%", label: "Savings" },
+  { value: "100%", label: "Ownership" }
+];
+---
+
+<BaseLayout title="Home">
+  <Header />
+
+  <main class="relative z-10 pt-32 lg:pt-48">
+    
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-6 text-center">
+      <!-- Floating badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary-600/30 to-primary-500/20 border border-primary-500/40 text-sm font-semibold text-primary-300 mb-8 animate-float">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-gold-400"></span>
+        </span>
+        Modern Business Engineering
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-[0.9]">
+        <span class="text-white">High-Profile Solutions.</span><br/>
+        <span class="text-gradient-gold text-glow-gold">Fraction of the Cost.</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12 leading-relaxed">
+        We replace entire IT teams with streamlined technology. Enterprise-grade custom applications delivered in <span class="text-gold-400 font-semibold">weeks</span>, not months.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/case-studies">View Our Work</Button>
+        <Button href="/services" variant="secondary">Our Services</Button>
+      </div>
+      
+      <!-- Quick stats row -->
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div class="text-center">
+          <div class="text-3xl font-black text-gradient-gold">90%</div>
+          <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Cost Savings</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-black text-gradient-blue">2-4</div>
+          <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Weeks</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-black text-gradient-gold">1-3</div>
+          <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Experts</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-black text-gradient-blue">100%</div>
+          <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Ownership</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section-padding">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <SectionHeading 
+              tag="The Reality"
+              title="Traditional IT is Broken."
+              subtitle="Standard development firms require massive overhead: project managers, analysts, architects, and junior developers. You pay for their bureaucracy."
+            />
+            <div class="space-y-4">
+              <div class="flex items-center gap-4 text-gray-400 font-medium glass-panel p-4 rounded-xl">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-red-500/20 text-red-400 text-sm">✕</span>
+                6-12 month timelines
+              </div>
+              <div class="flex items-center gap-4 text-gray-400 font-medium glass-panel p-4 rounded-xl">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-red-500/20 text-red-400 text-sm">✕</span>
+                $100k+ entry-level budgets
+              </div>
+              <div class="flex items-center gap-4 text-gray-400 font-medium glass-panel p-4 rounded-xl">
+                <span class="w-8 h-8 flex items-center justify-center rounded-full bg-red-500/20 text-red-400 text-sm">✕</span>
+                Slow, fragmented communication
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass-panel-gold p-8 lg:p-12 relative overflow-hidden group">
+            <!-- Decorative gold glow -->
+            <div class="absolute top-0 right-0 w-48 h-48 bg-gold-500/20 rounded-full blur-[80px] group-hover:bg-gold-500/30 transition-all duration-500"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-primary-500/20 rounded-full blur-[60px]"></div>
+            
+            <h3 class="text-3xl font-bold mb-6 relative z-10">
+              The <span class="text-gradient-gold">AWD</span> Advantage
+            </h3>
+            <p class="text-gray-300 mb-8 leading-relaxed relative z-10">
+              By leveraging modern frameworks and AI-augmented engineering, we deliver the same results with 1-3 experts.
+            </p>
+            <StatGrid stats={advantageStats} />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="section-padding relative">
+      <!-- Section background gradient -->
+      <div class="absolute inset-0 bg-section-gradient"></div>
+      <div class="absolute inset-0 border-y border-primary-500/20"></div>
+      
+      <div class="relative max-w-6xl mx-auto px-6">
+        <SectionHeading 
+          tag="Expertise"
+          title="What We Build"
+          subtitle="Enterprise-grade solutions tailored for growing businesses."
+          centered
+        />
+        <div class="grid md:grid-cols-3 gap-6">
+          <TechCard title="Custom Web Apps" emoji="🌐">
+            Modern, responsive, maintainable systems that fit your unique business workflow.
+          </TechCard>
+          <TechCard title="Automation" emoji="⚙️" gold>
+            Eliminate manual data entry and workflow bottlenecks with intelligent processes.
+          </TechCard>
+          <TechCard title="BI & Analytics" emoji="📊">
+            Dashboards and reporting interfaces that turn raw data into actionable decisions.
+          </TechCard>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section-padding text-center relative">
+      <!-- CTA decorative elements -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="w-[600px] h-[600px] bg-gradient-to-r from-primary-600/20 via-gold-500/10 to-primary-600/20 rounded-full blur-[120px]"></div>
+      </div>
+      
+      <div class="relative max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl md:text-6xl font-bold mb-8">
+          Ready to <span class="text-gradient-gold">evolve</span>?
+        </h2>
+        <p class="text-gray-300 text-lg mb-12 max-w-xl mx-auto">
+          Let's build your next-generation solution in a fraction of the time.
+        </p>
+        <Button href="/contact" class="text-lg px-12 py-4">Start Your Project</Button>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</BaseLayout>

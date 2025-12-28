@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  emoji?: string;
+  class?: string;
+  gold?: boolean;
+}
+
+const { title, emoji, class: className, gold = false } = Astro.props;
+const panelClass = gold ? 'glass-panel-gold' : 'glass-panel';
+---
+
+<div class:list={[panelClass, "p-8 relative overflow-hidden group", className]}>
+  <!-- Decorative glow -->
+  <div class:list={[
+    "absolute -top-20 -right-20 w-40 h-40 rounded-full blur-[60px] transition-all duration-500 group-hover:w-48 group-hover:h-48",
+    gold ? "bg-gold-500/20 group-hover:bg-gold-500/30" : "bg-primary-500/20 group-hover:bg-primary-500/30"
+  ]}></div>
+  
+  {emoji && (
+    <div class:list={[
+      "w-14 h-14 rounded-xl flex items-center justify-center mb-4 text-2xl transition-transform duration-300 group-hover:scale-110",
+      gold ? "bg-gradient-gold" : "bg-gradient-to-br from-primary-600 to-primary-500"
+    ]}>
+      {emoji}
+    </div>
+  )}
+  
+  <h3 class="text-xl font-bold mb-3 text-white">{title}</h3>
+  <div class="text-gray-400 text-sm leading-relaxed relative z-10">
+    <slot />
+  </div>
+</div>

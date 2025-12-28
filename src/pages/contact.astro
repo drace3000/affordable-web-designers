@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Button from '../components/Button.astro';
+
+const faqs = [
+  {
+    q: "How much does a typical project cost?",
+    a: "Because we use a streamlined approach with 1-3 experts instead of a massive team, our costs are typically 10-20% of what a traditional firm would charge. We provide fixed-price quotes after our initial consultation."
+  },
+  {
+    q: "How long does development take?",
+    a: "Most of our high-profile solutions launch within 2 to 4 weeks. Complex enterprise migrations or large-scale integrations may take longer, but we always focus on rapid iteration and MVP launches."
+  },
+  {
+    q: "What technologies do you use?",
+    a: "We specialize in modern, enterprise-ready stacks including .NET, SQL Server, React, and Blazor. We also leverage AI-augmented development tools to ensure our code is both high-quality and rapidly produced."
+  },
+  {
+    q: "Do you provide ongoing support?",
+    a: "Yes. All our systems are built for long-term maintainability. We offer support packages to ensure your application remains secure and optimized as your business grows."
+  }
+];
+---
+
+<BaseLayout title="Contact" description="Get a free consultation for your next custom web application or automation project.">
+  <Header />
+
+  <main class="pt-32 lg:pt-48">
+    <section class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-24 mb-32">
+        <div>
+          <SectionHeading 
+            tag="Let's Talk"
+            title="Start Your Transformation."
+            subtitle="Ready to build something great? Fill out the form or reach out directly."
+          />
+          
+          <div class="space-y-6 mt-12">
+            <div class="flex items-center gap-4 glass-panel p-4 rounded-xl">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center text-xl">📧</div>
+              <div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Email Us</div>
+                <div class="text-white font-semibold">hello@affordablewebdesigner.com</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 glass-panel-gold p-4 rounded-xl">
+              <div class="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center text-xl">⚡</div>
+              <div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Response Time</div>
+                <div class="text-white font-semibold">Typically within 24 hours</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel p-8 lg:p-12 relative overflow-hidden">
+          <!-- Decorative glows -->
+          <div class="absolute top-0 right-0 w-40 h-40 bg-primary-500/20 rounded-full blur-[80px]"></div>
+          <div class="absolute bottom-0 left-0 w-32 h-32 bg-gold-500/15 rounded-full blur-[60px]"></div>
+          
+          <form class="space-y-6 relative z-10">
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label for="name" class="text-xs font-bold uppercase tracking-widest text-gray-400">Name</label>
+                <input type="text" id="name" name="name" required class="w-full bg-primary-900/50 border border-primary-500/30 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/50 transition-all" placeholder="John Doe" />
+              </div>
+              <div class="space-y-2">
+                <label for="email" class="text-xs font-bold uppercase tracking-widest text-gray-400">Email</label>
+                <input type="email" id="email" name="email" required class="w-full bg-primary-900/50 border border-primary-500/30 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/50 transition-all" placeholder="john@company.com" />
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label for="project" class="text-xs font-bold uppercase tracking-widest text-gray-400">Project Type</label>
+              <select id="project" name="project" class="w-full bg-primary-900/50 border border-primary-500/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/50 transition-all">
+                <option value="web-app">Custom Web Application</option>
+                <option value="automation">Business Automation</option>
+                <option value="data">Data Management</option>
+                <option value="analytics">Reporting & Analytics</option>
+                <option value="integration">Integration Services</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label for="message" class="text-xs font-bold uppercase tracking-widest text-gray-400">Message</label>
+              <textarea id="message" name="message" rows="4" required class="w-full bg-primary-900/50 border border-primary-500/30 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/50 transition-all resize-none" placeholder="Tell us about your challenge..."></textarea>
+            </div>
+            <button type="submit" class="w-full btn-primary-sleek py-4">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding relative">
+      <div class="absolute inset-0 bg-section-gradient"></div>
+      <div class="absolute inset-0 border-y border-primary-500/20"></div>
+      
+      <div class="relative max-w-4xl mx-auto px-6">
+        <SectionHeading 
+          title="Common Questions"
+          centered
+        />
+        <div class="space-y-6">
+          {faqs.map((faq, i) => (
+            <div class:list={[
+              "p-8 rounded-2xl transition-all duration-300",
+              i % 2 === 0 ? "glass-panel" : "glass-panel-gold"
+            ]}>
+              <h3 class="text-lg font-bold mb-4 flex items-center gap-3">
+                <span class="text-gold-400 text-sm font-black">Q:</span>
+                {faq.q}
+              </h3>
+              <p class="text-gray-400 leading-relaxed pl-7">
+                {faq.a}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

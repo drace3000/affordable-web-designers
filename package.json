@@ -1,0 +1,20 @@
+{
+  "name": "awd",
+  "version": "1.0.0",
+  "description": "Affordable Web Designer - Marketing Website",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": ["web-design", "astro", "tailwind"],
+  "author": "AWD",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.6",
+    "tailwindcss": "^4.1.18"
+  }
+}
