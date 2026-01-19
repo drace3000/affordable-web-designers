@@ -8,7 +8,7 @@ import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
 
-  site: 'https://affordablewebdesigner.com',
+  site: 'https://afforablewebdesigner.com',
 
   output: 'server',
 
