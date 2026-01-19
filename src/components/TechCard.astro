@@ -2,11 +2,12 @@
 interface Props {
   title: string;
   emoji?: string;
+  logo?: string;
   class?: string;
   gold?: boolean;
 }
 
-const { title, emoji, class: className, gold = false } = Astro.props;
+const { title, emoji, logo, class: className, gold = false } = Astro.props;
 const panelClass = gold ? 'glass-panel-gold' : 'glass-panel';
 ---
 
@@ -17,7 +18,11 @@ const panelClass = gold ? 'glass-panel-gold' : 'glass-panel';
     gold ? "bg-gold-500/20 group-hover:bg-gold-500/30" : "bg-primary-500/20 group-hover:bg-primary-500/30"
   ]}></div>
   
-  {emoji && (
+  {logo ? (
+    <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4 bg-white/95 p-2 transition-transform duration-300 group-hover:scale-110">
+      <img src={logo} alt="" class="w-full h-full object-contain" loading="lazy" />
+    </div>
+  ) : emoji && (
     <div class:list={[
       "w-14 h-14 rounded-xl flex items-center justify-center mb-4 text-2xl transition-transform duration-300 group-hover:scale-110",
       gold ? "bg-gradient-gold" : "bg-gradient-to-br from-primary-600 to-primary-500"

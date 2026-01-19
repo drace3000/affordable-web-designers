@@ -8,10 +8,19 @@ import Button from '../../components/Button.astro';
 
 const studies = [
   {
+    title: "Xerox PeopleNet",
+    industry: "HR Technology",
+    emoji: "🏢",
+    logo: "/xerox-logo.png",
+    description: "Enterprise self-service HR transformation across 33,000 employees with massive operational gains.",
+    href: "/case-studies/xerox-peoplenet",
+    gold: true
+  },
+  {
     title: "Lake Country Fruit Storage",
     industry: "Agricultural Warehousing",
     emoji: "🍎",
-    description: "Replaced an extensive MS Access database with a robust SQL Server solution without business interruption.",
+    description: "End-to-end Fruit Storage and Distribution System tracking fruit from grower entry through climate-controlled warehousing to selective picking and sales.",
     href: "/case-studies/lake-country-fruit",
     gold: true
   },
@@ -22,6 +31,15 @@ const studies = [
     description: "Transformed simple attendance tracking into an information goldmine with predictive analytics and NLP.",
     href: "/case-studies/community-wellness",
     gold: false
+  },
+  {
+    title: "Bausch & Lomb International",
+    industry: "Global Operations",
+    emoji: "🌐",
+    logo: "/bl-logo.png",
+    description: "Global systems innovation delivering 45% communication increase, 50% faster financial reporting, and 40% inventory reduction across 38 locations.",
+    href: "/case-studies/bausch-lomb",
+    gold: true
   }
 ];
 ---
@@ -40,7 +58,7 @@ const studies = [
       <div class="grid md:grid-cols-2 gap-12 mb-32">
         {studies.map(study => (
           <a href={study.href} class="group block">
-            <TechCard title={study.title} emoji={study.emoji} gold={study.gold} class="h-full group-hover:scale-[1.02] transition-transform duration-500">
+            <TechCard title={study.title} emoji={study.emoji} logo={study.logo} gold={study.gold} class="h-full group-hover:scale-[1.02] transition-transform duration-500">
               <div class="text-[10px] font-bold uppercase tracking-widest text-gold-400 mb-4">{study.industry}</div>
               <p class="mb-8 text-gray-400">{study.description}</p>
               <div class="inline-flex items-center gap-2 text-sm font-semibold text-primary-300 group-hover:text-gold-400 transition-colors">
@@ -65,7 +83,12 @@ const studies = [
         <p class="text-gray-400 text-lg mb-12">
           We're ready to transform your data into a competitive advantage.
         </p>
-        <Button href="/contact">Start Your Project</Button>
+        <a href="/contact" class="btn-primary-sleek inline-flex items-center gap-2 group">
+          Start Your Project
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
       </div>
     </section>
   </main>

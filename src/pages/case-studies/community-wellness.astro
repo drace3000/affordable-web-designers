@@ -11,7 +11,13 @@ import AWD from '../../components/AWD.astro';
   <Header />
 
   <main class="pt-32 lg:pt-48">
-    <article class="max-w-4xl mx-auto px-6">
+    <article class="max-w-4xl mx-auto px-6" data-hover-section>
+      <a href="/case-studies" class="inline-flex items-center gap-2 text-sm font-semibold text-primary-300 hover:text-gold-400 transition-colors mb-8 group">
+        <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+        </svg>
+        Back to Work
+      </a>
       <SectionHeading 
         tag="Case Study"
         title="Community Wellness Center"
@@ -83,7 +89,12 @@ import AWD from '../../components/AWD.astro';
       <div class="absolute inset-0 border-t border-primary-500/20"></div>
       <div class="relative max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-8">Ready to turn your data into <span class="text-gradient-gold">intelligence</span>?</h2>
-        <Button href="/contact">Get Started Today</Button>
+        <a href="/contact" class="btn-primary-sleek inline-flex items-center gap-2 group">
+          Get Started Today
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
       </div>
     </section>
   </main>

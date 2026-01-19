@@ -4,9 +4,10 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import Button from '../../components/Button.astro';
+import AWD from '../../components/AWD.astro';
 ---
 
-<BaseLayout title="Lake Country Fruit Storage Case Study">
+<BaseLayout title="Xerox PeopleNet Case Study">
   <Header />
 
   <main class="pt-32 lg:pt-48">
@@ -17,24 +18,29 @@ import Button from '../../components/Button.astro';
         </svg>
         Back to Work
       </a>
+      <div class="flex items-center gap-4 mb-6">
+        <img src="/xerox-logo.png" alt="Xerox logo" class="h-10 w-auto drop-shadow-lg" loading="lazy" />
+        <p class="text-sm uppercase tracking-[0.2em] text-gray-400 font-semibold">HR Technology</p>
+      </div>
+
       <SectionHeading 
         tag="Case Study"
-        title="Lake Country Fruit Storage"
-        subtitle="Comprehensive Fruit Storage and Distribution System for a leading farmer-owned cooperative."
+        title="Xerox PeopleNet"
+        subtitle="Enterprise self-service HR transformation across 33,000 employees."
       />
 
       <div class="grid md:grid-cols-3 gap-6 mb-16">
         <div class="glass-panel p-6 text-center">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Industry</div>
-          <div class="text-white font-semibold">Agricultural Warehousing</div>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Employees Served</div>
+          <div class="text-gradient-gold font-black text-2xl">33,000+</div>
         </div>
         <div class="glass-panel-gold p-6 text-center">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Role</div>
-          <div class="text-gradient-gold font-bold text-xl">Full Lifecycle</div>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">HR Inquiries</div>
+          <div class="text-gradient-gold font-black text-2xl">-40%</div>
         </div>
         <div class="glass-panel p-6 text-center">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Scope</div>
-          <div class="text-white font-semibold">End-to-End Solution</div>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">HR Capacity Freed</div>
+          <div class="text-gradient-gold font-black text-2xl">+50%</div>
         </div>
       </div>
 
@@ -45,47 +51,50 @@ import Button from '../../components/Button.astro';
             The Opportunity
           </h3>
           <p class="text-gray-300 leading-relaxed">
-            Lake Country, a leading farmer-owned cooperative near the southern shore of Lake Ontario, is known for their wide variety of apples and other fruit. They needed an end-to-end system for tracking fruit from grower entry through climate-controlled warehouse management to selective picking and sales. AWD served as <span class="text-gold-400 font-semibold">sole analyst, UI designer, data modeler, and developer</span>—delivering a transformative solution that streamlined every step of their operation.
+            Xerox needed a modern HR self-service experience for 33,000 employees. <AWD /> handled the complete lifecycle—<span class="text-gold-400 font-semibold">design, development, implementation, and training</span>—to deliver PeopleNet as the backbone for time, benefits, and employee services, reducing HR resource involvement while elevating satisfaction.
           </p>
         </div>
 
         <h3 class="text-2xl font-bold text-white mb-6">Accomplishments</h3>
         <div class="grid sm:grid-cols-2 gap-6 mb-12">
           <div class="glass-panel p-6 border-l-4 border-l-gold-500">
-            <h4 class="text-white font-bold mb-2 uppercase tracking-[0.2em] text-sm">Transformative Development</h4>
-            <p class="text-gray-400 text-sm">Led the full development of the Fruit Storage and Distribution Application for a leading farmer-owned cooperative.</p>
+            <h4 class="text-white font-bold mb-2 uppercase tracking-[0.2em] text-sm">Pioneered HR Technology Transformation</h4>
+            <p class="text-gray-400 text-sm">
+              Launched PeopleNet, dramatically improving efficiency and employee satisfaction across 33,000 staff and ushering in a new era of HR self-service.
+            </p>
           </div>
           <div class="glass-panel p-6 border-l-4 border-l-primary-500">
-            <h4 class="text-white font-bold mb-2 uppercase tracking-[0.2em] text-sm">Grower-to-Sales Tracking</h4>
-            <p class="text-gray-400 text-sm">Engineered an innovative solution tracking fruit from grower entry to climate-controlled warehousing to selective picking and sales.</p>
+            <h4 class="text-white font-bold mb-2 uppercase tracking-[0.2em] text-sm">Streamlined HR Operations</h4>
+            <p class="text-gray-400 text-sm">
+              Reduced HR inquiries by 40% through thoughtful workflows, intuitive navigation, and rapid-response automation.
+            </p>
           </div>
           <div class="glass-panel p-6 border-l-4 border-l-primary-500">
-            <h4 class="text-white font-bold mb-2 uppercase tracking-[0.2em] text-sm">Inventory Optimization</h4>
-            <p class="text-gray-400 text-sm">Meticulous monitoring of growers, lots, product receipt with quality monitoring and pallet tag assignment.</p>
+            <h4 class="text-white font-bold mb-2 uppercase tracking-[0.2em] text-sm">Set Industry Standards</h4>
+            <p class="text-gray-400 text-sm">
+              Established PeopleNet as a benchmark platform, freeing 50% of HR resources to focus on strategic initiatives and driving an employee-centric culture.
+            </p>
           </div>
-          <div class="glass-panel p-6 border-l-4 border-l-gold-500">
-            <h4 class="text-white font-bold mb-2 uppercase tracking-[0.2em] text-sm">Enhanced Traceability</h4>
-            <p class="text-gray-400 text-sm">Significantly reduced spoilage and improved accuracy of grower payments and financial reporting.</p>
-          </div>
-          <div class="glass-panel-gold p-6 sm:col-span-2">
+          <div class="glass-panel-gold p-6">
             <h4 class="text-white font-bold mb-2 uppercase tracking-[0.2em] text-sm flex items-center gap-2">
-              <span class="w-6 h-6 rounded-full bg-gold-500/20 flex items-center justify-center text-xs">🔄</span>
-              Future-Proofed Operations
+              <span class="w-6 h-6 rounded-full bg-gold-500/20 flex items-center justify-center text-xs">💡</span>
+              What it means
             </h4>
-            <p class="text-gray-200 text-sm">Successfully executed seamless migration from Windows XP to Windows 10, ensuring long-term operational capabilities and system longevity.</p>
+            <p class="text-gray-200 text-sm">
+              Employees gained fast, accurate answers without waiting on HR queues. HR teams shifted to strategic programs, analytics, and workforce planning.
+            </p>
           </div>
         </div>
 
-        <!-- Quote -->
         <div class="glass-panel-gold p-8 lg:p-12 relative overflow-hidden mb-16">
           <div class="absolute top-0 right-0 w-40 h-40 bg-gold-500/20 rounded-full blur-[80px]"></div>
           <div class="absolute bottom-0 left-0 w-32 h-32 bg-primary-500/20 rounded-full blur-[60px]"></div>
           <div class="text-5xl text-gold-500/30 absolute top-4 left-6 font-serif">"</div>
           <blockquote class="relative z-10">
             <p class="text-xl lg:text-2xl text-white font-medium italic mb-6 leading-relaxed">
-              The Fruit Storage and Distribution System transformed how we track fruit from grower to customer. We now have complete visibility into every pallet, reduced spoilage, and streamlined grower payments.
+              PeopleNet turned HR into a self-service experience. We cut inquiry volume nearly in half and empowered teams to focus on strategy, not ticket triage.
             </p>
-            <footer class="text-gold-400 text-sm font-bold uppercase tracking-widest">— Lake Country Cooperative</footer>
+            <footer class="text-gold-400 text-sm font-bold uppercase tracking-widest">— Program Director, Xerox PeopleNet</footer>
           </blockquote>
         </div>
       </div>
@@ -94,9 +103,9 @@ import Button from '../../components/Button.astro';
     <section class="section-padding text-center relative">
       <div class="absolute inset-0 border-t border-primary-500/20"></div>
       <div class="relative max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-8">Ready for results like these?</h2>
+        <h2 class="text-3xl font-bold mb-8">Ready to modernize your <span class="text-gradient-gold">workforce</span>?</h2>
         <a href="/contact" class="btn-primary-sleek inline-flex items-center gap-2 group">
-          Let's Discuss Your Project
+          Talk with AWD
           <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
@@ -107,3 +116,4 @@ import Button from '../../components/Button.astro';
 
   <Footer />
 </BaseLayout>
+
