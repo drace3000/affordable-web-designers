@@ -17,7 +17,7 @@
   "author": "AWD",
   "license": "ISC",
   "dependencies": {
-    "@astrojs/node": "^9.5.1",
+    "@astrojs/vercel": "^9.0.4",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.6",
     "resend": "^6.6.0",
