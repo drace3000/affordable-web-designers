@@ -1,16 +1,19 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
-import node from '@astrojs/node';
 
-// https://astro.build/config
+import tailwindcss from '@tailwindcss/vite';
+
+ 
+
 export default defineConfig({
+
   site: 'https://affordablewebdesigner.com',
-  output: 'server',
-  adapter: node({
-    mode: 'standalone',
-  }),
+
+  output: 'static',
+
   vite: {
+
     plugins: [tailwindcss()],
+
   },
+
 });
